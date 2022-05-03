@@ -53,10 +53,10 @@ export const EditPostForm = () => {
           value={information}
           onChange={onContentChanged}
         />
+        <button className="button" type="button" onClick={onSavePostClicked}>
+          保存
+        </button>
       </form>
-      <button type="button" onClick={onSavePostClicked}>
-        保存
-      </button>
     </section>
   );
 };

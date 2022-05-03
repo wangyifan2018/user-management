@@ -1,10 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { HomePage } from '../components/HomePage';
-import { SinglePostPage } from '../redux/posts/SinglePostPage';
+import { SinglePostPage } from '../components/SinglePostPage';
 import { PostsList } from '../components//PostsList';
 import { AddPostForm } from '../components/AddPostForm';
-import '../index.css';
 import { EditPostForm } from '../components/EditPostForm/';
 
 export const AppRouter = () => {
