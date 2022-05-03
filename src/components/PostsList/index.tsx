@@ -1,9 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  deletePost,
-  postsType,
-  selectCount,
-} from '../../redux/posts/postsSlice';
+import { deletePost, selectCount } from '../../redux/posts/postsSlice';
 import { Link } from 'react-router-dom';
 import '../../index.css';
 
