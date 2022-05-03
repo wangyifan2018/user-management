@@ -54,7 +54,12 @@ export const AddPostForm = () => {
           placeholder="必填"
           onChange={onContentChanged}
         />
-        <button type="button" onClick={onSavePostClicked} disabled={!canSave}>
+        <button
+          className="button"
+          type="button"
+          onClick={onSavePostClicked}
+          disabled={!canSave}
+        >
           保存信息
         </button>
       </form>

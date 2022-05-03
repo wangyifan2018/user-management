@@ -14,6 +14,12 @@ export const Header = () => {
           <div className="navContent">
             <div className="navLinks">
               <NavLink to={'/'} style={({ isActive }) => navColor(isActive)}>
+                Home
+              </NavLink>
+              <NavLink
+                to={'/user'}
+                style={({ isActive }) => navColor(isActive)}
+              >
                 UserList
               </NavLink>
               <NavLink
@@ -21,9 +27,6 @@ export const Header = () => {
                 style={({ isActive }) => navColor(isActive)}
               >
                 AddUser
-              </NavLink>
-              <NavLink to={'help'} style={({ isActive }) => navColor(isActive)}>
-                Help
               </NavLink>
             </div>
           </div>

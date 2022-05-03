@@ -13,7 +13,7 @@ interface postAddAction {
 
 const initialState: postsType[] = [
   { id: '1', name: 'Jack!', information: 'Hello 996!' },
-  { id: '2', name: 'Bill', information: 'More text' },
+  { id: '2', name: 'Ma!', information: 'Transport talents?' },
 ];
 
 const postsSlice = createSlice({
@@ -31,10 +31,16 @@ const postsSlice = createSlice({
         existingPost.information = information;
       }
     },
+    deletePost(state: postsType[], action: postAddAction) {
+      state.splice(
+        state.findIndex((item) => item.id === action.payload.id),
+        1
+      );
+    },
   },
 });
 
-export const { postAdded, postUpdated } = postsSlice.actions;
+export const { postAdded, postUpdated, deletePost } = postsSlice.actions;
 
 export const selectCount = (state: { posts: postsType[] }) => state.posts;
 
