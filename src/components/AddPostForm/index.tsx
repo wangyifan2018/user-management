@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import { postAdded } from '../../redux/posts/postsSlice';
+import { useNavigate } from 'react-router-dom';
 
 export const AddPostForm = () => {
   const [name, setName] = useState('');
   const [information, setPosition] = useState('');
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const onTitleChanged = (e: {
     target: { value: React.SetStateAction<string> };
@@ -28,6 +30,8 @@ export const AddPostForm = () => {
 
       setName('');
       setPosition('');
+
+      navigate(`/user`);
     }
   };
 

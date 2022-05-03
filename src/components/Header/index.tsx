@@ -20,13 +20,13 @@ export const Header = () => {
                 to={'/user'}
                 style={({ isActive }) => navColor(isActive)}
               >
-                UserList
+                Users
               </NavLink>
               <NavLink
                 to={'create'}
                 style={({ isActive }) => navColor(isActive)}
               >
-                AddUser
+                Create
               </NavLink>
             </div>
           </div>
