@@ -13,7 +13,7 @@ export const EditPostForm = () => {
   const post = posts.find((post) => post.id === postId);
 
   const [name, setTitle] = useState(post?.name || '');
-  const [position, setContent] = useState(post?.position || '');
+  const [information, setContent] = useState(post?.information || '');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -27,8 +27,8 @@ export const EditPostForm = () => {
   }) => setContent(e.target.value);
 
   const onSavePostClicked = () => {
-    if (name && position) {
-      dispatch(postUpdated({ id: String(postId), name, position }));
+    if (name && information) {
+      dispatch(postUpdated({ id: String(postId), name, information }));
       navigate(`/posts/${postId}`);
     }
   };
@@ -50,7 +50,7 @@ export const EditPostForm = () => {
         <textarea
           id="postContent"
           name="postContent"
-          value={position}
+          value={information}
           onChange={onContentChanged}
         />
       </form>

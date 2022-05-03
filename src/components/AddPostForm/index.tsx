@@ -5,7 +5,7 @@ import { postAdded } from '../../redux/posts/postsSlice';
 
 export const AddPostForm = () => {
   const [name, setName] = useState('');
-  const [position, setPosition] = useState('');
+  const [information, setPosition] = useState('');
 
   const dispatch = useDispatch();
 
@@ -17,12 +17,12 @@ export const AddPostForm = () => {
   }) => setPosition(e.target.value);
 
   const onSavePostClicked = () => {
-    if (name && position) {
+    if (name && information) {
       dispatch(
         postAdded({
           id: nanoid(),
           name,
-          position,
+          information,
         })
       );
 
@@ -31,7 +31,7 @@ export const AddPostForm = () => {
     }
   };
 
-  const canSave = Boolean(name) && Boolean(position);
+  const canSave = Boolean(name) && Boolean(information);
 
   return (
     <section>
@@ -50,7 +50,7 @@ export const AddPostForm = () => {
         <input
           id="postContent"
           name="postContent"
-          value={position}
+          value={information}
           placeholder="必填"
           onChange={onContentChanged}
         />

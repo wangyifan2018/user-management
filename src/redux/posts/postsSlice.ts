@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export interface postsType {
   id: string;
   name: string;
-  position: string;
+  information: string;
 }
 
 interface postAddAction {
@@ -12,8 +12,8 @@ interface postAddAction {
 }
 
 const initialState: postsType[] = [
-  { id: '1', name: 'First Post!', position: 'Hello!' },
-  { id: '2', name: 'Second Post', position: 'More text' },
+  { id: '1', name: 'Jack!', information: 'Hello 996!' },
+  { id: '2', name: 'Bill', information: 'More text' },
 ];
 
 const postsSlice = createSlice({
@@ -24,11 +24,11 @@ const postsSlice = createSlice({
       state.push(action.payload);
     },
     postUpdated(state, action: postAddAction) {
-      const { id, name, position } = action.payload;
+      const { id, name, information } = action.payload;
       const existingPost = state.find((post) => post.id === id);
       if (existingPost) {
         existingPost.name = name;
-        existingPost.position = position;
+        existingPost.information = information;
       }
     },
   },

@@ -23,7 +23,7 @@ export const SinglePostPage = () => {
     <section>
       <article className="post">
         <h2>{post.name}</h2>
-        <p className="post-content">{post.position}</p>
+        <p className="post-content">{post.information}</p>
         <Link to={`/editPost/${post.id}`} className="button">
           Edit User
         </Link>

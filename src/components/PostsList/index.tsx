@@ -8,8 +8,8 @@ export const PostsList = () => {
 
   const renderedPosts = posts.map((post) => (
     <article className="post-excerpt" key={post.id}>
-      <h3>User Name : {post.name}</h3>
-      <p className="post-content">User Information : {post.position}</p>
+      <h3> Name : {post.name}</h3>
+      <p className="post-content"> Information : {post.information}</p>
       <Link to={`/posts/${post.id}`} className="button muted-button">
         View Information
       </Link>
