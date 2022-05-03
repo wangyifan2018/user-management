@@ -1,14 +1,12 @@
 import './App.css';
 import { AppRouter } from './routes/AppRouter';
-import { AddPostForm } from './components/AddPostForm';
-import { PostsList } from './redux/posts/PostsList';
+import { Header } from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <AppRouter />
-      <AddPostForm />
-      <PostsList />
     </div>
   );
 }

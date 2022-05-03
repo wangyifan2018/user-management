@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-interface postsType {
+export interface postsType {
   id: string;
   name: string;
   position: string;

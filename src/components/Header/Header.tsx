@@ -7,12 +7,12 @@ const navColor = (isActive: boolean) => {
 export const Header = () => {
   return (
     <header>
-      <h1>Expensify</h1>
+      <h1>User Management System</h1>
       <NavLink to={'/'} style={({ isActive }) => navColor(isActive)}>
         Home
       </NavLink>
       <NavLink to={'create'} style={({ isActive }) => navColor(isActive)}>
-        Create
+        AddUser
       </NavLink>
       <NavLink to={'edit'} style={({ isActive }) => navColor(isActive)}>
         Edit
