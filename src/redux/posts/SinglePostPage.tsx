@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { selectCount } from './postsSlice';
+import { Link } from 'react-router-dom';
 
 export const SinglePostPage = () => {
   const params = useParams();
@@ -23,6 +24,9 @@ export const SinglePostPage = () => {
       <article className="post">
         <h2>{post.name}</h2>
         <p className="post-content">{post.position}</p>
+        <Link to={`/editPost/${post.id}`} className="button">
+          Edit User
+        </Link>
       </article>
     </section>
   );

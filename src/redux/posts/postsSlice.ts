@@ -23,10 +23,18 @@ const postsSlice = createSlice({
     postAdded(state, action: postAddAction) {
       state.push(action.payload);
     },
+    postUpdated(state, action: postAddAction) {
+      const { id, name, position } = action.payload;
+      const existingPost = state.find((post) => post.id === id);
+      if (existingPost) {
+        existingPost.name = name;
+        existingPost.position = position;
+      }
+    },
   },
 });
 
-export const { postAdded } = postsSlice.actions;
+export const { postAdded, postUpdated } = postsSlice.actions;
 
 export const selectCount = (state: { posts: postsType[] }) => state.posts;
 

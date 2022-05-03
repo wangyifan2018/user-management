@@ -30,26 +30,31 @@ export const AddPostForm = () => {
       setPosition('');
     }
   };
+
+  const canSave = Boolean(name) && Boolean(position);
+
   return (
     <section>
-      <h2>添加新成员</h2>
+      <h2>Add New User</h2>
       <form>
-        <label htmlFor="postTitle">姓名:</label>
+        <label htmlFor="postTitle">Name:</label>
         <input
           type="text"
           id="postTitle"
           name="postTitle"
           value={name}
+          placeholder="必填"
           onChange={onTitleChanged}
         />
-        <label htmlFor="postContent">职位：</label>
-        <textarea
+        <label htmlFor="postContent">Information:</label>
+        <input
           id="postContent"
           name="postContent"
           value={position}
+          placeholder="必填"
           onChange={onContentChanged}
         />
-        <button type="button" onClick={onSavePostClicked}>
+        <button type="button" onClick={onSavePostClicked} disabled={!canSave}>
           保存信息
         </button>
       </form>

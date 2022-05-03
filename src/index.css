@@ -61,11 +61,11 @@ nav a:hover {
 }
 
 .navLinks {
-  display: flex;
+  display:flexbox;
 }
 
 .navLinks a {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .navLinks a .badge {
